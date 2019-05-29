@@ -3,12 +3,12 @@ using Keiwando.UI;
 
 public class TestController: MonoBehaviour {
 
-    private SlidingMenu menu;
+    private SlidingContainer menu;
 
     [SerializeField] private float slideDuration = 0.6f;
 
     void Start() {
-        this.menu = FindObjectOfType<SlidingMenu>();
+        this.menu = FindObjectOfType<SlidingContainer>();
     }
 
     void Update() {
@@ -19,10 +19,10 @@ public class TestController: MonoBehaviour {
 
     private void Slide() {
         var currentProgress = menu.AnimationProgress;
-        if (menu.LastSlideDirection == SlidingMenu.Direction.Up) {
-            menu.Slide(SlidingMenu.Direction.Down, slideDuration, 1f - currentProgress);
+        if (menu.LastSlideDirection == SlidingContainer.Direction.Up) {
+            menu.Slide(SlidingContainer.Direction.Down, slideDuration, 1f - currentProgress);
         } else {
-            menu.Slide(SlidingMenu.Direction.Up, slideDuration, 1f - currentProgress);
+            menu.Slide(SlidingContainer.Direction.Up, slideDuration, 1f - currentProgress);
         }
     }
 }

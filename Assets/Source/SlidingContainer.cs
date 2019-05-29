@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Keiwando.UI {
     
     [RequireComponent(typeof(RectTransform))]
-    public class SlidingMenu: MonoBehaviour {
+    public class SlidingContainer: MonoBehaviour {
 
         public enum Direction {
             Left, Right, Up, Down
